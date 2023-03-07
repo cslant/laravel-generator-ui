@@ -1,0 +1,17 @@
+composer.lock
+composer.phar
+.DS_Store
+/node_modules
+Thumbs.db
+/bower_components
+
+.env
+.env.backup
+.idea
+.vscode
+
+/log
+
+package-lock.json
+yarn.lock
+/.sass-cache

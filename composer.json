@@ -1,0 +1,25 @@
+{
+    "name": "tanhongit/laravel-generator-ui",
+    "description": "Laravel Generator UI is a collection of HTML, CSS, and JS files that implement a clean, responsive, and customizable UI for the Laravel Generator.",
+    "homepage": "https://github.com/tanhongit/laravel-generator-ui",
+    "license": "Apache-2.0",
+    "keywords": [
+        "laravel generator ui",
+        "generator ui",
+        "crud generator ui",
+        "migration generator ui",
+        "model generator ui",
+        "laravel-generator-ui"
+    ],
+    "authors": [
+        {
+            "name": "Tan Nguyen",
+            "email": "tannp27@gmail.com",
+            "homepage": "https://tanhongit.com",
+            "role": "Lead"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/tanhongit/laravel-generator-ui/issues"
+    }
+}
