@@ -5,12 +5,16 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 const config = {
     entry: {
-        main: [".src/css/style.css", "./js/main.js"],
+        main: [
+            "./src/js/material-dashboard.js",
+        ],
         editor: {
             import: [
-                '../css/styles.css',
+                // CSS
+                './src/assets/css/style.css',
 
-                '../js/script.js',
+                // JS
+                './src/assets/js/script.js',
             ]
         }
     },
@@ -50,20 +54,6 @@ const config = {
                 test: /\.png|jpg|gif/,
                 type: "asset/resource",
             },
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: [/node_modules/, /vendor/],
-                loader: "eslint-loader",
-                options: {
-                    fix: true,
-                },
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
-            },
         ],
     },
     externals: {
@@ -82,10 +72,10 @@ const config = {
     },
 
     plugins: [
-        new StylelintPlugin({
-            files: ["./**/*.{scss,sass}"],
+        /*new StylelintPlugin({
+            files: ["./!**!/!*.{scss,sass}"],
             fix: true,
-        }),
+        }),*/
         new MiniCssExtractPlugin(),
     ],
 };
