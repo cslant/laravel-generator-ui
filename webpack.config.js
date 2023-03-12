@@ -15,6 +15,9 @@ const config = {
                 // CSS
                 './src/assets/css/style.css',
 
+                // SCSS
+                './src/assets/scss/style.scss',
+
                 // JS
                 './src/assets/js/script.js',
             ]
@@ -40,6 +43,15 @@ const config = {
                     {
                         loader: "postcss-loader",
                     },
+                ],
+            },
+            {
+                test: /\.(scss|sass)$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
                 ],
             },
             {
