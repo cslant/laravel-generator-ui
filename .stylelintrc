@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "comment-empty-line-before": null
+  },
+  "ignoreFiles": [
+    "/src/style/scss/material-dashboard.scss"
+  ]
+}

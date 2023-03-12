@@ -757,7 +757,7 @@ $shadow-umbra-opacity:        0.2 !default;
 $shadow-penumbra-opacity:     0.14 !default;
 $shadow-ambient-opacity:      0.12 !default;
 $shadow-focus:                0 0 8px rgba($black, .18),
-                              0 8px 16px rgba($black, .36);
+  0 8px 16px rgba($black, .36);
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           .5rem !default;
@@ -859,7 +859,6 @@ $form-label-outline-top:                  .375rem !default;
 $form-label-outline-after-height:         .5rem !default;
 $form-label-outline-after-width:          .625rem !default;
 $form-label-outline-after-border-width:   1px 0 0 !default;
-
 
 
 $input-padding-y:                       .5rem !default;

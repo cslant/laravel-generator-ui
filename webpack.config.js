@@ -1,3 +1,4 @@
+const StylelintPlugin = require("stylelint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -52,7 +53,7 @@ const config = {
                 use: 'svgo-loader'
             },
             {
-                test: /\.png|jpg|gif/,
+                test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
             },
         ],
@@ -73,10 +74,10 @@ const config = {
     },
 
     plugins: [
-        /*new StylelintPlugin({
-            files: ["./!**!/!*.{scss,sass}"],
+        new StylelintPlugin({
+            files: ["./**/*.{scss,sass}"],
             fix: true,
-        }),*/
+        }),
         new MiniCssExtractPlugin(),
     ],
 };
