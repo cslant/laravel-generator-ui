@@ -5,6 +5,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const config = {
     entry: {
         main: [
+            "./src/style/css/material-dashboard.css",
+
             "./src/js/material-dashboard.js",
         ],
         editor: {
