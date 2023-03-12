@@ -71,8 +71,8 @@
     .sidenav-toggler-inner{
       .sidenav-toggler-line:first-child,
       .sidenav-toggler-line:last-child {
-          width: $sidenav-toggler-line-active-width;
-          transform: $sidenav-toggler-line-transform;
+        width: $sidenav-toggler-line-active-width;
+        transform: $sidenav-toggler-line-transform;
       }
     }
   }

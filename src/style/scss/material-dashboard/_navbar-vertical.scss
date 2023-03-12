@@ -85,8 +85,8 @@
             padding-left: 0;
             padding-right: 0; // Target IE 10 & 11
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            min-height: none;
-            height: 100%;
+              min-height: none;
+              height: 100%;
             }
           }
           // Fixes the vertical navbar to the left

@@ -1,3 +1,4 @@
+const StylelintPlugin = require("stylelint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -5,6 +6,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const config = {
     entry: {
         main: [
+            "./src/style/css/material-dashboard.css",
+
             "./src/js/material-dashboard.js",
         ],
         editor: {
@@ -50,7 +53,7 @@ const config = {
                 use: 'svgo-loader'
             },
             {
-                test: /\.png|jpg|gif/,
+                test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
             },
         ],
@@ -71,10 +74,10 @@ const config = {
     },
 
     plugins: [
-        /*new StylelintPlugin({
-            files: ["./!**!/!*.{scss,sass}"],
+        new StylelintPlugin({
+            files: ["./**/*.{scss,sass}"],
             fix: true,
-        }),*/
+        }),
         new MiniCssExtractPlugin(),
     ],
 };
