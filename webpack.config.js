@@ -7,17 +7,14 @@ const config = {
     entry: {
         main: [
             "./src/style/css/material-dashboard.css",
-
             "./src/js/material-dashboard.js",
         ],
         editor: {
             import: [
                 // CSS
                 './src/assets/css/style.css',
-
                 // SCSS
                 './src/assets/scss/style.scss',
-
                 // JS
                 './src/assets/js/script.js',
             ]
@@ -37,12 +34,8 @@ const config = {
                             publicPath: "",
                         },
                     },
-                    {
-                        loader: "css-loader",
-                    },
-                    {
-                        loader: "postcss-loader",
-                    },
+                    "css-loader",
+                    "postcss-loader",
                 ],
             },
             {
@@ -82,9 +75,9 @@ const config = {
                     ecma: 6,
                 },
             }),
-            new CssMinimizerPlugin()],
+            new CssMinimizerPlugin(),
+        ],
     },
-
     plugins: [
         new StylelintPlugin({
             files: ["./**/*.{scss,sass}"],
@@ -93,10 +86,8 @@ const config = {
         new MiniCssExtractPlugin(),
     ],
 };
-module.exports = (env, argv) => {
-    argv.mode === "development"
-        ? (config.devtool = "eval-cheap-module-source-map")
-        : (config.devtool = "source-map");
 
+module.exports = (env, { mode }) => {
+    config.devtool = mode === "development" ? "eval-cheap-module-source-map" : "source-map";
     return config;
 };
