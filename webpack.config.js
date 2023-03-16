@@ -6,9 +6,9 @@ const TerserPlugin = require("terser-webpack-plugin");
 const config = {
     entry: {
         main: [
-            "./src/css/material-dashboard.css",
             "./src/css/nucleo-icons.css",
             "./src/css/nucleo-svg.css",
+            "./src/css/material-dashboard.css",
             "./src/js/material-dashboard.js",
         ],
         editor: {
