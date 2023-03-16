@@ -6,7 +6,9 @@ const TerserPlugin = require("terser-webpack-plugin");
 const config = {
     entry: {
         main: [
-            "./src/style/css/material-dashboard.css",
+            "./src/css/material-dashboard.css",
+            "./src/css/nucleo-icons.css",
+            "./src/css/nucleo-svg.css",
             "./src/js/material-dashboard.js",
         ],
         editor: {
@@ -21,7 +23,7 @@ const config = {
         }
     },
     output: {
-        filename: "[name].js",
+        filename: "js/[name].js",
     },
     module: {
         rules: [
@@ -55,11 +57,24 @@ const config = {
                         maxSize: 8192
                     }
                 },
-                use: 'svgo-loader'
+                use: 'svgo-loader',
+                generator: {
+                    filename: "assets/img/[name][ext][query]",
+                }
             },
             {
-                test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
+                generator: {
+                    filename: "assets/fonts/[name][ext][query]",
+                }
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                type: "asset/resource",
+                generator: {
+                    filename: "assets/img/[name][ext][query]",
+                }
             },
         ],
     },
@@ -83,7 +98,9 @@ const config = {
             files: ["./**/*.{scss,sass}"],
             fix: true,
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+        }),
     ],
 };
 
