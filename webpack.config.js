@@ -9,7 +9,10 @@ const config = {
             "./src/css/nucleo-icons.css",
             "./src/css/nucleo-svg.css",
             "./src/css/material-dashboard.css",
-            "./src/js/material-dashboard.js",
+            "./src/js/core/popper.min.js",
+            "./src/js/core/bootstrap.min.js",
+            "./src/js/plugins/perfect-scrollbar.min.js",
+            "./src/js/plugins/smooth-scrollbar.min.js",
         ],
         editor: {
             import: [
