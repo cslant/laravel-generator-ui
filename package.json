@@ -8,7 +8,7 @@
     "ui"
   ],
   "license": "Apache-2.0",
-  "repository": "git@github.com:lbiltech/laravel-generator-ui.git",
+  "repository": "git@github.com:cslant/laravel-generator-ui.git",
   "authors": [
     {
       "name": "Tan Nguyen",
